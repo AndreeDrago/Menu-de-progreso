@@ -1,0 +1,82 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+  
+.menuProgreso {
+    text-align: center;
+}
+  
+.barraProgreso {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    width: 40vh;
+}
+  
+.barraProgreso::before {
+    content: '';
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+  
+.progreso {
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+  
+.circulo {
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    transition: 0.4s ease;
+}
+  
+.circulo.activo {
+    border-color: blue;
+}
+  
+.menuProgreso input {
+    background-color: blue;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+  
+.menuProgreso input:active {
+    transform: scale(0.98);
+}
+  
+.menuProgreso input:focus {
+    outline: 0;
+}
+  
+.menuProgreso input:disabled {
+    background-color: black;
+    cursor: not-allowed;
+}
